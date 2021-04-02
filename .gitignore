@@ -30,14 +30,3 @@
 *.exe
 *.out
 *.app
-
-# Main Folder
-.thumbnails
-bin/*
-data/*
-include/*
-#lib/*
-source/*
-utils/*
-*.bat
-
