@@ -24,12 +24,12 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
 *.out
 *.app
+
 
 # Main Folder
 .thumbnails
@@ -37,7 +37,17 @@ bin/*
 data/*
 include/*
 #lib/*
-source/*
 utils/*
 *.bat
 
+#Ultralight Includes
+!data/ultralight.basemat
+!include/AppCore
+!include/JavaScriptCore
+!include/Ultralight
+
+#UltraLight Libraries
+!bin/AppCore.dll
+!bin/WebCore.dll
+!bin/Ultralight.dll
+!bin/UltralightCore.dll
