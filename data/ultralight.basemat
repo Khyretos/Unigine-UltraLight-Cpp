@@ -1,0 +1,60 @@
+BaseMaterial ultralight <editable=false var_prefix=var texture_prefix=tex>
+{
+
+	Texture2D ultralight_texture <internal=true>
+
+	Pass imgui
+	{
+		Vertex=
+		#{
+			#include <core/shaders/common/common.h>
+
+			// Input data struct
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float2,0,POSITION)	// position
+				INIT_ATTRIBUTE(float2,1,TEXCOORD0)	// uv
+				INIT_ATTRIBUTE(float4,2,TEXCOORD1)	// color
+			END
+
+			// Output data struct
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION		// position
+				INIT_OUT(float2,0)	// uv
+				INIT_OUT(float4,1)	// color
+			END
+
+			MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
+
+				OUT_POSITION = getPosition(float3(IN_ATTRIBUTE(0), 0.0f));
+				OUT_DATA(0).xy = IN_ATTRIBUTE(1).xy;
+				OUT_DATA(1).rgba = IN_ATTRIBUTE(2).rgba;
+				
+			MAIN_END
+		#}
+
+
+		Fragment=
+		#{
+			// Include the UUSL fragment shader header
+			#include <core/shaders/common/fragment.h>
+
+			// Input values
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION		// position
+				INIT_IN(float2,0)	// uv
+				INIT_IN(float4,1)	// color
+
+			END
+
+			MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
+				float2 uv = IN_DATA(0);
+				//uv.y = 1.0f - uv.y;
+
+				OUT_COLOR = IN_DATA(1) * TEXTURE(tex_imgui_texture, uv);
+				//OUT_COLOR = float4(uv, 0.0f, 1.0f);
+			MAIN_END
+
+			// end
+		#}
+	}
+}
