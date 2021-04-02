@@ -1,0 +1,3624 @@
+{
+	"version": "2",
+	"project_settings": {
+		"name": "UltraLightCpp",
+		"default_world": "UltraLightCpp",
+		"editor_version": "editor_app",
+		"engine_binaries": "development",
+		"launcher_gui": 0,
+		"component_system": 0,
+		"launcher_console": 1,
+		"runtimes_generator": 0,
+		"build_tool": 0,
+		"bin_flags": 6,
+		"precision": 0,
+		"precision_forced": "0",
+		"project_template": "empty",
+		"api": "vs2015cpp",
+		"stereo": "",
+		"monitors": "",
+		"sound": "auto",
+		"plugins": [
+			"FbxImporter",
+			"GLTFImporter",
+			"FbxExporter"
+		],
+		"addons": [
+		],
+		"files": [
+			{
+				"file": "bin/",
+				"tags": [
+					"unigine",
+					"binaries",
+					"user_binaries",
+					"plugins"
+				],
+				"hash": ""
+			},
+			{
+				"file": "bin/ApplicationLauncher_x64.exe",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628061128600"
+			},
+			{
+				"file": "bin/ApplicationLauncher_x64d.exe",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628061405600"
+			},
+			{
+				"file": "bin/EditorCore_x64.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736280914594720"
+			},
+			{
+				"file": "bin/EditorCore_x64d.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736281121007520"
+			},
+			{
+				"file": "bin/EditorCore_x64d.pdb",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362816131788800"
+			},
+			{
+				"file": "bin/Editor_x64.exe",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628084747416"
+			},
+			{
+				"file": "bin/Editor_x64d.exe",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628086495400"
+			},
+			{
+				"file": "bin/Editor_x64d.pdb",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736280927504640"
+			},
+			{
+				"file": "bin/FbxExporter_x64.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "16173628247674528"
+			},
+			{
+				"file": "bin/FbxExporter_x64d.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "161736282410387104"
+			},
+			{
+				"file": "bin/FbxExporter_x64d.pdb",
+				"tags": [
+					"plugins"
+				],
+				"hash": "161736282411472896"
+			},
+			{
+				"file": "bin/FbxImporter_x64.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "16173628237941280"
+			},
+			{
+				"file": "bin/FbxImporter_x64d.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "161736282310815640"
+			},
+			{
+				"file": "bin/FbxImporter_x64d.pdb",
+				"tags": [
+					"plugins"
+				],
+				"hash": "161736282313340672"
+			},
+			{
+				"file": "bin/GLTFImporter_x64.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "1617362823637600"
+			},
+			{
+				"file": "bin/GLTFImporter_x64d.dll",
+				"tags": [
+					"plugins"
+				],
+				"hash": "16173628231132184"
+			},
+			{
+				"file": "bin/GLTFImporter_x64d.pdb",
+				"tags": [
+					"plugins"
+				],
+				"hash": "16173628236090752"
+			},
+			{
+				"file": "bin/Qt5Concurrent.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736280728672"
+			},
+			{
+				"file": "bin/Qt5Core.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628076105088"
+			},
+			{
+				"file": "bin/Qt5Gui.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628076464000"
+			},
+			{
+				"file": "bin/Qt5Network.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628071301504"
+			},
+			{
+				"file": "bin/Qt5Widgets.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628075530624"
+			},
+			{
+				"file": "bin/UltraLightCpp_x64.exe",
+				"tags": [
+					"user_binaries"
+				],
+				"hash": "1617362822434840"
+			},
+			{
+				"file": "bin/UltraLightCpp_x64d.exe",
+				"tags": [
+					"user_binaries"
+				],
+				"hash": "1617362822551584"
+			},
+			{
+				"file": "bin/UltraLightCpp_x64d.pdb",
+				"tags": [
+					"user_binaries"
+				],
+				"hash": "1617362822905216"
+			},
+			{
+				"file": "bin/Unigine_x64.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736279534768536"
+			},
+			{
+				"file": "bin/Unigine_x64.pdb",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362798155275264"
+			},
+			{
+				"file": "bin/Unigine_x64d.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736280042515616"
+			},
+			{
+				"file": "bin/Unigine_x64d.pdb",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362805177975296"
+			},
+			{
+				"file": "bin/d3dcompiler_47.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628224524480"
+			},
+			{
+				"file": "bin/imageformats/",
+				"tags": [
+					"binaries"
+				],
+				"hash": ""
+			},
+			{
+				"file": "bin/imageformats/qgif.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736280632768"
+			},
+			{
+				"file": "bin/msvcp140.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362822633152"
+			},
+			{
+				"file": "bin/openal32.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362822891904"
+			},
+			{
+				"file": "bin/platforms/",
+				"tags": [
+					"binaries"
+				],
+				"hash": ""
+			},
+			{
+				"file": "bin/platforms/qwindows.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628061446400"
+			},
+			{
+				"file": "bin/styles/",
+				"tags": [
+					"binaries"
+				],
+				"hash": ""
+			},
+			{
+				"file": "bin/styles/qwindowsvistastyle.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "1617362806136192"
+			},
+			{
+				"file": "bin/vcruntime140.dll",
+				"tags": [
+					"binaries"
+				],
+				"hash": "161736282287888"
+			},
+			{
+				"file": "data/",
+				"tags": [
+					"unigine",
+					"unigine_data",
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/00/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/00/00eb950dc0cf1a9ab100b1f5e79151dea10d5709.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869673"
+			},
+			{
+				"file": "data/.cache_textures/05/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/05/05462bf386517bdde2ee432e50c888cd653f1f42.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736286975"
+			},
+			{
+				"file": "data/.cache_textures/07/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/07/07083332dc2178e98f0fed3402d4b70301727086.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/0c/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/0c/0c40ae1197df44f7194b7837ee3355747b159bbd.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869507"
+			},
+			{
+				"file": "data/.cache_textures/0c/0c5c7dca62e0f075bc7497f81bdfe9aec6b2ee1b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869916"
+			},
+			{
+				"file": "data/.cache_textures/13/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/13/13a5cfbdb0fa29542b384848c12daf762fe10b84.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869142"
+			},
+			{
+				"file": "data/.cache_textures/15/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/15/15ac98fe768235314d23277fd9b642e5c377115b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869568"
+			},
+			{
+				"file": "data/.cache_textures/20/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/20/200386361225d7765ece91fb69d383014d0d2029.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628693580"
+			},
+			{
+				"file": "data/.cache_textures/20/209223525dca69a0fcb0beb5731582b5f90f17cf.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869549"
+			},
+			{
+				"file": "data/.cache_textures/26/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/26/26da2af870934f62e8d8e6cc83d390c8cd94abbd.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628692104"
+			},
+			{
+				"file": "data/.cache_textures/26/26e4f4d3f5aea60d340d85f378bda7b69066ba25.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/27/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/27/273a674fad0cb1658ca1d293b73e48e3f6e629bd.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869545"
+			},
+			{
+				"file": "data/.cache_textures/2a/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/2a/2a1fd85054ccff517ff8c967525de5aff0056bb4.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869138"
+			},
+			{
+				"file": "data/.cache_textures/2a/2a3d6d41edb8ac91336265af489c891e9d772658.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869508"
+			},
+			{
+				"file": "data/.cache_textures/2b/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/2b/2ba3d92b408d6b164bcb300f790cae75cbea4cf5.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/2f/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/2f/2ff69e549c1d5f93de6de3a7528f8b008a418dac.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628691488"
+			},
+			{
+				"file": "data/.cache_textures/30/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/30/3029b50b55b2d3e5d7ae2c4536836c220955b5b4.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869964"
+			},
+			{
+				"file": "data/.cache_textures/32/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/32/32e9a2dce08f292cedf2dc9d208b019f27a586a0.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869855"
+			},
+			{
+				"file": "data/.cache_textures/34/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/34/34175fbd86edd102ab7fa17f701053b9a36c8ed6.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869540"
+			},
+			{
+				"file": "data/.cache_textures/35/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/35/35d987f84c0681c9b575fd13edfc11a03cf1a3bb.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869267"
+			},
+			{
+				"file": "data/.cache_textures/40/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/40/40a87da144af43d809a26a48d571fc15e32f4649.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628691488"
+			},
+			{
+				"file": "data/.cache_textures/43/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/43/434ab133edf4b06c916e3d36bd646d04746da384.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869142"
+			},
+			{
+				"file": "data/.cache_textures/48/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/48/4897ab70a5ce5fa42d8d1df686477d56fad5a162.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869941"
+			},
+			{
+				"file": "data/.cache_textures/4a/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/4a/4a4d3bb3387c2e545b0d91fedc839111e5c21a91.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628691068"
+			},
+			{
+				"file": "data/.cache_textures/4c/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/4c/4c773a07e2054239168a5187d0ed71ad10db3c99.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869694"
+			},
+			{
+				"file": "data/.cache_textures/4e/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/4e/4e584ab73b2bfc61c1657232231db852679f097d.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869559"
+			},
+			{
+				"file": "data/.cache_textures/50/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/50/50a7dd9a9b6318b66a187b5f53e555c46990f05f.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869752"
+			},
+			{
+				"file": "data/.cache_textures/52/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/52/5219d6ddb5dbd1520e843a369ad2b64326bb24e2.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869564"
+			},
+			{
+				"file": "data/.cache_textures/52/52f38ec6b14bcb981ade156a36d1b7e739f7412c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/53/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/53/5350f4d903a2f858ef22d23ec214d24e9eefa46c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/5c/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/5c/5c850013a9101fad1758f061d105f588dd1cdb70.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628691637"
+			},
+			{
+				"file": "data/.cache_textures/5f/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/5f/5f5d9f2b1839b7c2abacd82f80f1710029c92dd1.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869546"
+			},
+			{
+				"file": "data/.cache_textures/5f/5f88b453b0694618fda82a50f745114ae4f4f2e4.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869792"
+			},
+			{
+				"file": "data/.cache_textures/60/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/60/608a8dc4c5a4b83bf534a24c501b2190f73fd599.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701021"
+			},
+			{
+				"file": "data/.cache_textures/61/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/61/61b0b59df82cb279bd434ebf41e02e1eaed10c19.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287016440"
+			},
+			{
+				"file": "data/.cache_textures/68/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/68/687d64ea30955f5fb0cc46f68dfc256299f8d1b9.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628704218"
+			},
+			{
+				"file": "data/.cache_textures/69/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/69/692dbb7d56d633e22551bd47f4d92cd2d498270d.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870508"
+			},
+			{
+				"file": "data/.cache_textures/6b/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/6b/6bb8f70f87ba7922417ca619726258a4e2c2cbb3.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287012039"
+			},
+			{
+				"file": "data/.cache_textures/6d/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/6d/6d057be675fe9fc6e79842ed26dcc7ac341c6002.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870252"
+			},
+			{
+				"file": "data/.cache_textures/71/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/71/71072b09cfdc22269143e05fa57467d2458d3acf.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287016440"
+			},
+			{
+				"file": "data/.cache_textures/78/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/78/785ff6e3b3917f985156fc0cd582f4691362cd9e.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870765"
+			},
+			{
+				"file": "data/.cache_textures/7e/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/7e/7ee5c14618f1a7ed2fc1e8689e0930a7ac97f5da.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870780"
+			},
+			{
+				"file": "data/.cache_textures/7f/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/7f/7f007b6ade028423fffa18e4fec82097418ea60c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870137"
+			},
+			{
+				"file": "data/.cache_textures/7f/7f47c8d6e46f8545705795d5e35b65c3651356ff.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628702104"
+			},
+			{
+				"file": "data/.cache_textures/7f/7f881940897e7e9f6361d580766b1acbf205ca86.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870792"
+			},
+			{
+				"file": "data/.cache_textures/83/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/83/837fb41b70ad8a04bbceacfcea1b2bc1698b4eaf.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870801"
+			},
+			{
+				"file": "data/.cache_textures/85/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/85/85edcbcfb81c7b4819c7ff656aa0aa4222abf0f7.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870696"
+			},
+			{
+				"file": "data/.cache_textures/88/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/88/8822874216026cc7b2b61784d36abee999508e06.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870440"
+			},
+			{
+				"file": "data/.cache_textures/8b/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/8b/8baa0631703930d425599a934979dc1b77548c3c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701488"
+			},
+			{
+				"file": "data/.cache_textures/8c/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/8c/8c0b4e6ac34641b7d50ab4b9e3bb6615bc37ba51.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870781"
+			},
+			{
+				"file": "data/.cache_textures/90/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/90/9073faae5cb638004eef27ecfd0e7001583bfb5c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870749"
+			},
+			{
+				"file": "data/.cache_textures/91/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/91/9154446becf4434fcabf82177bb1532fd0124fad.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287013017"
+			},
+			{
+				"file": "data/.cache_textures/96/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/96/9632876d2b9fee295c00eb4edde19b7aa44d9966.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701463"
+			},
+			{
+				"file": "data/.cache_textures/9b/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/9b/9baa3e95ea88cd4a62620bb25d2a6b08ad8e9655.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870158"
+			},
+			{
+				"file": "data/.cache_textures/9f/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/9f/9f2f4594005da4e941a5d275268a8ebdea663b79.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870528"
+			},
+			{
+				"file": "data/.cache_textures/a5/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/a5/a543adc9eb319e3f88d3ef80a6cdfa10390cd26b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870138"
+			},
+			{
+				"file": "data/.cache_textures/a6/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/a6/a69f6434c9cb8bfe9fe0cd8af20df6dfd2d0b756.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870189"
+			},
+			{
+				"file": "data/.cache_textures/a8/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/a8/a8106e01d8743fe2b0601f5d30c9eaf6cee2a4ca.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870397"
+			},
+			{
+				"file": "data/.cache_textures/ac/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/ac/ac1a3a438bd1e86b966d072a9f16e2703460be21.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870537"
+			},
+			{
+				"file": "data/.cache_textures/b0/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/b0/b0d94d3515b2e88572861ff7cd6966471dc4a90f.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870369"
+			},
+			{
+				"file": "data/.cache_textures/b1/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/b1/b1114d0c046f1d7c4df1a44ae88c8ae95e69e3e0.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870152"
+			},
+			{
+				"file": "data/.cache_textures/b3/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/b3/b3db7f8b07c4a9f1746a7d5ac3937fadafd3c0c5.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870462"
+			},
+			{
+				"file": "data/.cache_textures/b5/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/b5/b54a67af925478f0947c2fcb4682cc89f2df454e.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701066"
+			},
+			{
+				"file": "data/.cache_textures/ba/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/ba/badef8fb7418499586d25da29dc3964803904f74.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870568"
+			},
+			{
+				"file": "data/.cache_textures/c6/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/c6/c62764d2f4c2320e40f2cea92bc20b77baca1d27.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701488"
+			},
+			{
+				"file": "data/.cache_textures/cb/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/cb/cb3dbb4e699ac80e4405d1d1cfe838e8a6819c5e.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870208"
+			},
+			{
+				"file": "data/.cache_textures/cc/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/cc/cc0788aaf1dea001d896796c0c0025db99e9217e.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870792"
+			},
+			{
+				"file": "data/.cache_textures/cd/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/cd/cd518d3796c6bd6e996a25f695bace323b8f2b69.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870326"
+			},
+			{
+				"file": "data/.cache_textures/ce/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/ce/ce1aa1606a9db211bdc08b918cd68e08db5c47c8.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870792"
+			},
+			{
+				"file": "data/.cache_textures/ce/ced8a56035b3993f7cc3d59274baf7c9db489e94.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870741"
+			},
+			{
+				"file": "data/.cache_textures/d1/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/d1/d15782a509aae84ba85cebcb4e69571f60a7e33a.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870383"
+			},
+			{
+				"file": "data/.cache_textures/d1/d17296c8a69640d3c44a515c2a7ad5634ecc1b60.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870783"
+			},
+			{
+				"file": "data/.cache_textures/d1/d1fc9b4bb675b82e6449a1b57547479094a0f5af.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701330"
+			},
+			{
+				"file": "data/.cache_textures/d7/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/d7/d798cb1e62ee2d61a673b602b3fd94acc56b564b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870162"
+			},
+			{
+				"file": "data/.cache_textures/d9/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/d9/d983788c941772c5901b50b086a133504411be43.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870779"
+			},
+			{
+				"file": "data/.cache_textures/df/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/df/df7a5f2766dedfe11a5f2a91917ef4deff3baa5b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628705997"
+			},
+			{
+				"file": "data/.cache_textures/e0/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e0/e038d46e26ad35b1e7775c22e5377971790cb075.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870504"
+			},
+			{
+				"file": "data/.cache_textures/e0/e06c2f545bfcd2a3361d97a69591cacdb9a8edc8.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870749"
+			},
+			{
+				"file": "data/.cache_textures/e1/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e1/e16a40067ebd143a160fc69c08ebefc6cda4d53c.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870792"
+			},
+			{
+				"file": "data/.cache_textures/e2/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e2/e237a1333473ddcc4729b8cfa3bee53e75991b77.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870521"
+			},
+			{
+				"file": "data/.cache_textures/e3/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e3/e3120f350170783531c278607a4b366265cfbfc9.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870534"
+			},
+			{
+				"file": "data/.cache_textures/e4/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e4/e4d299078df70a69aaadd12d2f969ba2c5250f8f.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870268"
+			},
+			{
+				"file": "data/.cache_textures/e5/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e5/e54914f90bd13a04dd907d935228e5d625fbe33d.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287065856"
+			},
+			{
+				"file": "data/.cache_textures/e8/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e8/e8772a2688ce8129905b279f10968623a5ddaca7.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870704"
+			},
+			{
+				"file": "data/.cache_textures/e9/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/e9/e996fd971d20ec4b4a1b21e0959c8e3e52acce9b.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628702213"
+			},
+			{
+				"file": "data/.cache_textures/ea/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/ea/ea515587c4fe8099a29d8c3fa333da5f7678de31.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870389"
+			},
+			{
+				"file": "data/.cache_textures/ed/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/ed/edf5dbe16c25c3185d9ce7b15e99469442484856.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870619"
+			},
+			{
+				"file": "data/.cache_textures/f4/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/f4/f4ee40b8c4ae8bbefa997d03d00b5341ea459b28.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628702951"
+			},
+			{
+				"file": "data/.cache_textures/f8/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/f8/f8901e1d389508d85a9e765788209fcac07b8ca1.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362870746"
+			},
+			{
+				"file": "data/.cache_textures/fd/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.cache_textures/fd/fdce52252458c90169b884999ed107ed4f612ffe.texture",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628701212"
+			},
+			{
+				"file": "data/.runtimes/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/07/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/07/07083332dc2178e98f0fed3402d4b70301727086.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628712796344"
+			},
+			{
+				"file": "data/.runtimes/07/07083332dc2178e98f0fed3402d4b70301727086.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871129"
+			},
+			{
+				"file": "data/.runtimes/2b/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/2b/2bdf2610177e422f32ce09c2dcbabe396d465244.node",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871894"
+			},
+			{
+				"file": "data/.runtimes/2b/2bdf2610177e422f32ce09c2dcbabe396d465244.node.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871127"
+			},
+			{
+				"file": "data/.runtimes/7e/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/7e/7ee5c14618f1a7ed2fc1e8689e0930a7ac97f5da.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871174904"
+			},
+			{
+				"file": "data/.runtimes/7e/7ee5c14618f1a7ed2fc1e8689e0930a7ac97f5da.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871128"
+			},
+			{
+				"file": "data/.runtimes/cc/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/cc/cc0788aaf1dea001d896796c0c0025db99e9217e.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628712796344"
+			},
+			{
+				"file": "data/.runtimes/cc/cc0788aaf1dea001d896796c0c0025db99e9217e.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871130"
+			},
+			{
+				"file": "data/.runtimes/d1/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/d1/d1fc9b4bb675b82e6449a1b57547479094a0f5af.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628711398256"
+			},
+			{
+				"file": "data/.runtimes/d1/d1fc9b4bb675b82e6449a1b57547479094a0f5af.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871128"
+			},
+			{
+				"file": "data/.runtimes/d6/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/.runtimes/d6/d66c38d3cb2ce8161c55807d4a2d47b80c46e7b7.mesh",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871802887"
+			},
+			{
+				"file": "data/.runtimes/d6/d66c38d3cb2ce8161c55807d4a2d47b80c46e7b7.mesh.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871127"
+			},
+			{
+				"file": "data/UltraLightCpp.world",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287269436"
+			},
+			{
+				"file": "data/UltraLightCpp.world.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362872551"
+			},
+			{
+				"file": "data/core.ung",
+				"tags": [
+					"unigine_data"
+				],
+				"hash": "161736285964844266"
+			},
+			{
+				"file": "data/editor2.ung",
+				"tags": [
+					"unigine_data"
+				],
+				"hash": "161736286428413862"
+			},
+			{
+				"file": "data/root_mount.umount",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362865102"
+			},
+			{
+				"file": "data/scripts.ung",
+				"tags": [
+					"unigine_data"
+				],
+				"hash": "161736285926476"
+			},
+			{
+				"file": "data/shader_d3d11.cache",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736286610017183"
+			},
+			{
+				"file": "data/shader_gl.cache",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362869104805372"
+			},
+			{
+				"file": "data/template_assets/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/env_probes/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/env_probes/env_probe.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628714194416"
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/env_probes/env_probe.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871862"
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/voxel_probes/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/voxel_probes/voxel_probe.dds",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628711152128"
+			},
+			{
+				"file": "data/template_assets/template_bake_lighting/voxel_probes/voxel_probe.dds.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871862"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball.fbx",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628711346864"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball.fbx.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628713302"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_a.png",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287150869"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_a.png.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871969"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_alb.png",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628711855393"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_alb.png.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871984"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_mat.mat",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871733"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_mat.mat.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871294"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_n.png",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871548280"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_n.png.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871967"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_sh.png",
+				"tags": [
+					"project_data"
+				],
+				"hash": "16173628711772981"
+			},
+			{
+				"file": "data/template_assets/template_material_ball/material_ball_sh.png.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871966"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/",
+				"tags": [
+					"project_data"
+				],
+				"hash": ""
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_high.render",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287136979"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_high.render.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362871303"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_low.render",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287236928"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_low.render.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362872303"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_medium.render",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287236962"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_medium.render.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362872306"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_ultra.render",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287236968"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_ultra.render.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362872305"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_virtual_reality.render",
+				"tags": [
+					"project_data"
+				],
+				"hash": "161736287236946"
+			},
+			{
+				"file": "data/template_assets/template_render_settings/template_virtual_reality.render.meta",
+				"tags": [
+					"project_data"
+				],
+				"hash": "1617362872315"
+			},
+			{
+				"file": "include/",
+				"tags": [
+					"unigine_includes",
+					"unigine_utils"
+				],
+				"hash": ""
+			},
+			{
+				"file": "include/Unigine.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628173506"
+			},
+			{
+				"file": "include/UnigineApp.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628176651"
+			},
+			{
+				"file": "include/UnigineApp.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287246008"
+			},
+			{
+				"file": "include/UnigineAsyncQueue.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628172914"
+			},
+			{
+				"file": "include/UnigineAsyncQueue.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287219112"
+			},
+			{
+				"file": "include/UnigineBase.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628175249"
+			},
+			{
+				"file": "include/UnigineBiMap.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281723026"
+			},
+			{
+				"file": "include/UnigineBounds.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281842827"
+			},
+			{
+				"file": "include/UnigineBounds.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287292751"
+			},
+			{
+				"file": "include/UnigineCIGIConnector.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362872159184"
+			},
+			{
+				"file": "include/UnigineCallback.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281835744"
+			},
+			{
+				"file": "include/UnigineCamera.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628183483"
+			},
+			{
+				"file": "include/UnigineCamera.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287224757"
+			},
+			{
+				"file": "include/UnigineChecksum.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628183112"
+			},
+			{
+				"file": "include/UnigineChecksum.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628723279"
+			},
+			{
+				"file": "include/UnigineComponentSystem.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281852206"
+			},
+			{
+				"file": "include/UnigineComponentSystem.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287222034"
+			},
+			{
+				"file": "include/UnigineCompress.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628182209"
+			},
+			{
+				"file": "include/UnigineCompress.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628723227"
+			},
+			{
+				"file": "include/UnigineConfig.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628185422"
+			},
+			{
+				"file": "include/UnigineConfig.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287235619"
+			},
+			{
+				"file": "include/UnigineConsole.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628188582"
+			},
+			{
+				"file": "include/UnigineConsole.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287236133"
+			},
+			{
+				"file": "include/UnigineControls.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628187760"
+			},
+			{
+				"file": "include/UnigineControls.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287253692"
+			},
+			{
+				"file": "include/UnigineCurve2d.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628182317"
+			},
+			{
+				"file": "include/UnigineCurve2d.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287216412"
+			},
+			{
+				"file": "include/UnigineCustomApp.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287335964"
+			},
+			{
+				"file": "include/UnigineDISConnector.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628733474"
+			},
+			{
+				"file": "include/UnigineDecals.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628184238"
+			},
+			{
+				"file": "include/UnigineDecals.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287321611"
+			},
+			{
+				"file": "include/UnigineDir.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192210"
+			},
+			{
+				"file": "include/UnigineDir.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287310245"
+			},
+			{
+				"file": "include/UnigineEditor.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192680"
+			},
+			{
+				"file": "include/UnigineEditor.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628739653"
+			},
+			{
+				"file": "include/UnigineEllipsoid.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192724"
+			},
+			{
+				"file": "include/UnigineEllipsoid.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287310598"
+			},
+			{
+				"file": "include/UnigineEngine.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281934510"
+			},
+			{
+				"file": "include/UnigineEngine.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287390032"
+			},
+			{
+				"file": "include/UnigineExport.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628193246"
+			},
+			{
+				"file": "include/UnigineExport.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628738049"
+			},
+			{
+				"file": "include/UnigineFactory.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628191689"
+			},
+			{
+				"file": "include/UnigineFfp.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192780"
+			},
+			{
+				"file": "include/UnigineFfp.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628739806"
+			},
+			{
+				"file": "include/UnigineFields.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628195699"
+			},
+			{
+				"file": "include/UnigineFields.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287327802"
+			},
+			{
+				"file": "include/UnigineFileSystem.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281911572"
+			},
+			{
+				"file": "include/UnigineFileSystem.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287382616"
+			},
+			{
+				"file": "include/UnigineFunction.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281910932"
+			},
+			{
+				"file": "include/UnigineFunction.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628731814"
+			},
+			{
+				"file": "include/UnigineGUID.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192595"
+			},
+			{
+				"file": "include/UnigineGUID.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628736977"
+			},
+			{
+				"file": "include/UnigineGame.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628192703"
+			},
+			{
+				"file": "include/UnigineGame.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287311991"
+			},
+			{
+				"file": "include/UnigineGeodetics.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628193478"
+			},
+			{
+				"file": "include/UnigineGeodetics.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287313702"
+			},
+			{
+				"file": "include/UnigineGeodeticsTransformer.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628191520"
+			},
+			{
+				"file": "include/UnigineGeodeticsTransformer.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628734018"
+			},
+			{
+				"file": "include/UnigineGeometry.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281910045"
+			},
+			{
+				"file": "include/UnigineGeometry.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287337552"
+			},
+			{
+				"file": "include/UnigineGui.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628196289"
+			},
+			{
+				"file": "include/UnigineGui.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287338776"
+			},
+			{
+				"file": "include/UnigineHLAConnector.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287316859"
+			},
+			{
+				"file": "include/UnigineHash.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281913078"
+			},
+			{
+				"file": "include/UnigineHash.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628733362"
+			},
+			{
+				"file": "include/UnigineHashMap.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281912906"
+			},
+			{
+				"file": "include/UnigineHashSet.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628195109"
+			},
+			{
+				"file": "include/UnigineIG.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628736540"
+			},
+			{
+				"file": "include/UnigineImage.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281913043"
+			},
+			{
+				"file": "include/UnigineImage.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287396801"
+			},
+			{
+				"file": "include/UnigineImport.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736281916705"
+			},
+			{
+				"file": "include/UnigineImport.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287347105"
+			},
+			{
+				"file": "include/UnigineInput.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628194826"
+			},
+			{
+				"file": "include/UnigineInput.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287325697"
+			},
+			{
+				"file": "include/UnigineInterface.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "1617362820119018"
+			},
+			{
+				"file": "include/UnigineInterface.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628733682"
+			},
+			{
+				"file": "include/UnigineInterpreter.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282044367"
+			},
+			{
+				"file": "include/UnigineInterpreter.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287395858"
+			},
+			{
+				"file": "include/UnigineJson.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628202770"
+			},
+			{
+				"file": "include/UnigineJson.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287316859"
+			},
+			{
+				"file": "include/UnigineLeapMotion.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287325892"
+			},
+			{
+				"file": "include/UnigineLights.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282020184"
+			},
+			{
+				"file": "include/UnigineLights.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362873157061"
+			},
+			{
+				"file": "include/UnigineLoadingScreen.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628202361"
+			},
+			{
+				"file": "include/UnigineLoadingScreen.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287310721"
+			},
+			{
+				"file": "include/UnigineLog.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628201921"
+			},
+			{
+				"file": "include/UnigineLog.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628732412"
+			},
+			{
+				"file": "include/UnigineLogic.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628207748"
+			},
+			{
+				"file": "include/UnigineLogic.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287314878"
+			},
+			{
+				"file": "include/UnigineMap.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628208869"
+			},
+			{
+				"file": "include/UnigineMap.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628731161"
+			},
+			{
+				"file": "include/UnigineMaterial.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282013272"
+			},
+			{
+				"file": "include/UnigineMaterial.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287396077"
+			},
+			{
+				"file": "include/UnigineMaterials.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628202430"
+			},
+			{
+				"file": "include/UnigineMaterials.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287410723"
+			},
+			{
+				"file": "include/UnigineMath2d.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628202828"
+			},
+			{
+				"file": "include/UnigineMath2d.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628745834"
+			},
+			{
+				"file": "include/UnigineMathLib.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "1617362820169574"
+			},
+			{
+				"file": "include/UnigineMathLib.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362874390478"
+			},
+			{
+				"file": "include/UnigineMemory.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628201894"
+			},
+			{
+				"file": "include/UnigineMemory.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628742179"
+			},
+			{
+				"file": "include/UnigineMesh.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628209060"
+			},
+			{
+				"file": "include/UnigineMesh.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287461985"
+			},
+			{
+				"file": "include/UnigineMeshDynamic.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628209042"
+			},
+			{
+				"file": "include/UnigineMeshDynamic.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287447440"
+			},
+			{
+				"file": "include/UnigineMeshStatic.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628204664"
+			},
+			{
+				"file": "include/UnigineMeshStatic.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287422869"
+			},
+			{
+				"file": "include/UnigineNode.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282013050"
+			},
+			{
+				"file": "include/UnigineNode.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287483060"
+			},
+			{
+				"file": "include/UnigineNodes.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628204703"
+			},
+			{
+				"file": "include/UnigineNodes.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287413143"
+			},
+			{
+				"file": "include/UnigineObjects.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282091297"
+			},
+			{
+				"file": "include/UnigineObjects.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362874595559"
+			},
+			{
+				"file": "include/UniginePackage.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628741539"
+			},
+			{
+				"file": "include/UniginePackageUng.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211440"
+			},
+			{
+				"file": "include/UniginePackageUng.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628743897"
+			},
+			{
+				"file": "include/UniginePair.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212980"
+			},
+			{
+				"file": "include/UniginePalette.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211471"
+			},
+			{
+				"file": "include/UniginePalette.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628744897"
+			},
+			{
+				"file": "include/UniginePath.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212146"
+			},
+			{
+				"file": "include/UniginePath.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628749290"
+			},
+			{
+				"file": "include/UniginePathFinding.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628216548"
+			},
+			{
+				"file": "include/UniginePathFinding.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287428901"
+			},
+			{
+				"file": "include/UniginePhysicals.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628215934"
+			},
+			{
+				"file": "include/UniginePhysicals.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287428188"
+			},
+			{
+				"file": "include/UniginePhysics.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282140910"
+			},
+			{
+				"file": "include/UniginePhysics.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362874258014"
+			},
+			{
+				"file": "include/UniginePlayers.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282110198"
+			},
+			{
+				"file": "include/UniginePlayers.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287470236"
+			},
+			{
+				"file": "include/UniginePlugin.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212905"
+			},
+			{
+				"file": "include/UniginePlugin.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628743960"
+			},
+			{
+				"file": "include/UniginePrimitives.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212615"
+			},
+			{
+				"file": "include/UniginePrimitives.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628748070"
+			},
+			{
+				"file": "include/UnigineProfiler.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212134"
+			},
+			{
+				"file": "include/UnigineProfiler.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628744477"
+			},
+			{
+				"file": "include/UnigineProperties.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282111759"
+			},
+			{
+				"file": "include/UnigineProperties.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287484451"
+			},
+			{
+				"file": "include/UniginePtr.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628218976"
+			},
+			{
+				"file": "include/UniginePtr.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628743218"
+			},
+			{
+				"file": "include/UnigineRegExp.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211216"
+			},
+			{
+				"file": "include/UnigineRegExp.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628742879"
+			},
+			{
+				"file": "include/UnigineRender.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282166848"
+			},
+			{
+				"file": "include/UnigineRender.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362874478871"
+			},
+			{
+				"file": "include/UnigineRenderContext.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211547"
+			},
+			{
+				"file": "include/UnigineRenderContext.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628744619"
+			},
+			{
+				"file": "include/UnigineResource.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211597"
+			},
+			{
+				"file": "include/UnigineResource.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628741108"
+			},
+			{
+				"file": "include/UnigineSet.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628214236"
+			},
+			{
+				"file": "include/UnigineSet.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628742392"
+			},
+			{
+				"file": "include/UnigineShader.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282111188"
+			},
+			{
+				"file": "include/UnigineShader.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287451048"
+			},
+			{
+				"file": "include/UnigineSort.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628216266"
+			},
+			{
+				"file": "include/UnigineSounds.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628217294"
+			},
+			{
+				"file": "include/UnigineSounds.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287449628"
+			},
+			{
+				"file": "include/UnigineSplineGraph.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212809"
+			},
+			{
+				"file": "include/UnigineSplineGraph.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287512295"
+			},
+			{
+				"file": "include/UnigineStreams.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628218970"
+			},
+			{
+				"file": "include/UnigineStreams.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287546806"
+			},
+			{
+				"file": "include/UnigineString.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282123150"
+			},
+			{
+				"file": "include/UnigineString.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287558801"
+			},
+			{
+				"file": "include/UnigineSystemInfo.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628211821"
+			},
+			{
+				"file": "include/UnigineSystemInfo.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628757457"
+			},
+			{
+				"file": "include/UnigineTextures.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282111540"
+			},
+			{
+				"file": "include/UnigineTextures.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287561402"
+			},
+			{
+				"file": "include/UnigineThread.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282113242"
+			},
+			{
+				"file": "include/UnigineThread.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628759338"
+			},
+			{
+				"file": "include/UnigineTileset.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212775"
+			},
+			{
+				"file": "include/UnigineTileset.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287513815"
+			},
+			{
+				"file": "include/UnigineTilesetFile.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628212071"
+			},
+			{
+				"file": "include/UnigineTilesetFile.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287511133"
+			},
+			{
+				"file": "include/UnigineTimer.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628221452"
+			},
+			{
+				"file": "include/UnigineTimer.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362875804"
+			},
+			{
+				"file": "include/UnigineTree.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282214274"
+			},
+			{
+				"file": "include/UnigineTree.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628759311"
+			},
+			{
+				"file": "include/UnigineType.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282213545"
+			},
+			{
+				"file": "include/UnigineType.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628751119"
+			},
+			{
+				"file": "include/UnigineUlon.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628222616"
+			},
+			{
+				"file": "include/UnigineUlon.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287511447"
+			},
+			{
+				"file": "include/UnigineUserInterface.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628222293"
+			},
+			{
+				"file": "include/UnigineUserInterface.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628759104"
+			},
+			{
+				"file": "include/UnigineUtils.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628221192"
+			},
+			{
+				"file": "include/UnigineUtils.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628753819"
+			},
+			{
+				"file": "include/UnigineVector.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282245771"
+			},
+			{
+				"file": "include/UnigineVector.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287517592"
+			},
+			{
+				"file": "include/UnigineViewport.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628224649"
+			},
+			{
+				"file": "include/UnigineViewport.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287523558"
+			},
+			{
+				"file": "include/UnigineVisualizer.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628227976"
+			},
+			{
+				"file": "include/UnigineVisualizer.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287538780"
+			},
+			{
+				"file": "include/UnigineWidgets.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282252473"
+			},
+			{
+				"file": "include/UnigineWidgets.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362875287137"
+			},
+			{
+				"file": "include/UnigineWorld.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282210250"
+			},
+			{
+				"file": "include/UnigineWorld.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287561413"
+			},
+			{
+				"file": "include/UnigineWorlds.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "161736282215281"
+			},
+			{
+				"file": "include/UnigineWorlds.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287587041"
+			},
+			{
+				"file": "include/UnigineXml.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628229709"
+			},
+			{
+				"file": "include/UnigineXml.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287554557"
+			},
+			{
+				"file": "include/plugins/",
+				"tags": [
+					"unigine_includes",
+					"unigine_utils"
+				],
+				"hash": ""
+			},
+			{
+				"file": "include/plugins/UnigineARTTracker.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287521362"
+			},
+			{
+				"file": "include/plugins/UnigineAppEasyBlend.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287524730"
+			},
+			{
+				"file": "include/plugins/UnigineAppOculus.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628225215"
+			},
+			{
+				"file": "include/plugins/UnigineAppOculus.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287513505"
+			},
+			{
+				"file": "include/plugins/UnigineAppProjection.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287543795"
+			},
+			{
+				"file": "include/plugins/UnigineAppVarjo.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628224604"
+			},
+			{
+				"file": "include/plugins/UnigineAppVarjo.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287518223"
+			},
+			{
+				"file": "include/plugins/UnigineAppVive.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628223435"
+			},
+			{
+				"file": "include/plugins/UnigineAppVive.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287512263"
+			},
+			{
+				"file": "include/plugins/UnigineAppWall.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628755669"
+			},
+			{
+				"file": "include/plugins/UnigineGPUMonitor.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628754784"
+			},
+			{
+				"file": "include/plugins/UnigineIG.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362875149894"
+			},
+			{
+				"file": "include/plugins/UnigineInterface.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287515392"
+			},
+			{
+				"file": "include/plugins/UnigineKinect.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628224217"
+			},
+			{
+				"file": "include/plugins/UnigineKinect.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287519250"
+			},
+			{
+				"file": "include/plugins/UnigineLeapMotion.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628223647"
+			},
+			{
+				"file": "include/plugins/UnigineSSLSocket.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628766955"
+			},
+			{
+				"file": "include/plugins/UnigineSteam.h",
+				"tags": [
+					"unigine_includes"
+				],
+				"hash": "16173628226328"
+			},
+			{
+				"file": "include/plugins/UnigineSteam.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287622191"
+			},
+			{
+				"file": "include/plugins/UnigineSyncker.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287675454"
+			},
+			{
+				"file": "include/plugins/UnigineTeslaSuit.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736287642222"
+			},
+			{
+				"file": "include/plugins/UnigineVrpnClient.xml",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628766586"
+			},
+			{
+				"file": "launch_debug.bat",
+				"tags": [
+					"launcher_console"
+				],
+				"hash": "1617362876391"
+			},
+			{
+				"file": "launch_editor.bat",
+				"tags": [
+					"launcher_console"
+				],
+				"hash": "1617362876414"
+			},
+			{
+				"file": "launch_release.bat",
+				"tags": [
+					"launcher_console"
+				],
+				"hash": "1617362876390"
+			},
+			{
+				"file": "lib/",
+				"tags": [
+					"binaries"
+				],
+				"hash": ""
+			},
+			{
+				"file": "lib/Unigine_x64.lib",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628176789140"
+			},
+			{
+				"file": "lib/Unigine_x64d.lib",
+				"tags": [
+					"binaries"
+				],
+				"hash": "16173628176805810"
+			},
+			{
+				"file": "source/",
+				"tags": [
+					"project_sources"
+				],
+				"hash": ""
+			},
+			{
+				"file": "source/AppEditorLogic.cpp",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628722067"
+			},
+			{
+				"file": "source/AppEditorLogic.h",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "1617362872993"
+			},
+			{
+				"file": "source/AppSystemLogic.cpp",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628721693"
+			},
+			{
+				"file": "source/AppSystemLogic.h",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "1617362872911"
+			},
+			{
+				"file": "source/AppWorldLogic.cpp",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628722861"
+			},
+			{
+				"file": "source/AppWorldLogic.h",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628721076"
+			},
+			{
+				"file": "source/UltraLightCpp.vcxproj",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628724581"
+			},
+			{
+				"file": "source/main.cpp",
+				"tags": [
+					"project_sources"
+				],
+				"hash": "16173628721285"
+			},
+			{
+				"file": "utils/",
+				"tags": [
+					"unigine",
+					"unigine_utils"
+				],
+				"hash": ""
+			},
+			{
+				"file": "utils/natvis/",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": ""
+			},
+			{
+				"file": "utils/natvis/image.natvis",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "16173628171891"
+			},
+			{
+				"file": "utils/natvis/install.txt",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "1617362817214"
+			},
+			{
+				"file": "utils/natvis/unigine_stl.natvis",
+				"tags": [
+					"unigine_utils"
+				],
+				"hash": "161736281710715"
+			}
+		]
+	},
+	"sdk": {
+		"key": "communitybin_pro2.14-betawindows",
+		"internal_id": "tier0_bin_pro_windows",
+		"products": [
+			"tier0_bin_pro"
+		],
+		"edition": "community",
+		"version": "2.14-beta",
+		"internal_version": "49",
+		"base_version": "",
+		"timestamp": "202103182028",
+		"type": "bin_pro",
+		"os": "windows",
+		"path": "W:/004 - Programs/Unigine SDK Browser/Engine/sdks/community_pro_windows_2.14-beta/",
+		"name": "UNIGINE 2 Community Pro",
+		"resource": "sdk",
+		"size": "1118663158",
+		"uncompressed_size": "3150619369",
+		"activation_types": [
+			2
+		]
+	}
+}
