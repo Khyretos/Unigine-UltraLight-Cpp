@@ -240,6 +240,15 @@ static int on_key_released(unsigned int key)
 
 static int on_unicode_key_pressed(unsigned int key)
 {
+	if (view->HasInputFocus()) {
+		///
+		/// The View has an input element with visible keyboard focus (blinking caret).
+		/// Dispatch the keyboard event to the view and consume it.
+		///
+		//view->Focus();
+	}
+
+
 	if (key < App::KEY_ESC || key >= App::NUM_KEYS) 
 	{
 		char ch = static_cast<char>(key);
@@ -251,17 +260,11 @@ static int on_unicode_key_pressed(unsigned int key)
 		evt.text = ConvertedKey;
 		evt.unmodified_text = ConvertedKey; // If not available, set to same as evt.text
 
-		GetKeyIdentifierFromVirtualKeyCode(evt.virtual_key_code, evt.key_identifier);
+		//GetKeyIdentifierFromVirtualKeyCode(evt.virtual_key_code, evt.key_identifier);
 
 		view->FireKeyEvent(evt);
 
-		if (view->HasInputFocus()) {
-			///
-			/// The View has an input element with visible keyboard focus (blinking caret).
-			/// Dispatch the keyboard event to the view and consume it.
-			///
-			//view->Focus();
-		}
+
 	}
 	return 0;
 }
