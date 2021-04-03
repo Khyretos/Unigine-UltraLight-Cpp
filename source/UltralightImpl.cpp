@@ -2,12 +2,15 @@
 #include <AppCore/Platform.h>
 #include <AppCore/Overlay.h>
 #include <AppCore/JSHelpers.h>
+#include <Ultralight/String.h>
+#include <AppCore/CAPI.h>
+#include <JavaScriptCore/JavaScript.h>
+#include <JavaScriptCore/JSRetainPtr.h>
 
 #include <UnigineMeshDynamic.h>
 #include <UnigineRender.h>
 #include <UnigineWidgets.h>
 #include "UnigineApp.h"
-#include <Ultralight/String.h>
 
 using namespace Unigine;
 using namespace ultralight;
@@ -33,6 +36,58 @@ TexturePtr my_texture_ds;
 WidgetSpritePtr hud;
 GuiPtr gui;
 
+class MyListener : public LoadListener {
+public:
+	MyListener() {}
+	virtual ~MyListener() {}
+
+	JSValue GetMessage(const JSObject& thisObject, const JSArgs& args) {
+		///
+		/// Return our message to JavaScript as a JSValue.
+		///
+		return JSValue("Hello from C++!<br/>Ultralight rocks!");
+	}
+
+	///
+	/// Inherited from LoadListener, called when the page has finished parsing
+	/// the document.
+	///
+	/// We perform all our JavaScript initialization here.
+	///
+	virtual void OnDOMReady(ultralight::View* caller,
+		uint64_t frame_id,
+		bool is_main_frame,
+		const ultralight::String& url) override {
+		///
+		/// Set our View's JSContext as the one to use in subsequent JSHelper calls
+		///
+		Ref<JSContext> context = caller->LockJSContext();
+		SetJSContext(context.get());
+
+		///
+		/// Get the global object (this would be the "window" object in JS)
+		///
+		JSObject global = JSGlobalObject();
+
+		///
+		/// Bind MyApp::GetMessage to the JavaScript function named "GetMessage".
+		///
+		/// You can get/set properties of JSObjects by using the [] operator with
+		/// the following types as potential property values:
+		///  - JSValue
+		///      Represents a JavaScript value, eg String, Object, Function, etc.
+		///  - JSCallback 
+		///      Typedef of std::function<void(const JSObject&, const JSArgs&)>)
+		///  - JSCallbackWithRetval 
+		///      Typedef of std::function<JSValue(const JSObject&, const JSArgs&)>)
+		///
+		/// We use the BindJSCallbackWithRetval macro to bind our C++ class member
+		/// function to our JavaScript callback.
+		///
+		global["GetMessage"] = BindJSCallbackWithRetval(&MyListener::GetMessage);
+	}
+};
+
 const int KeyToInt(unsigned int key)
 {
 	int ConvertedKey = 0;
@@ -40,7 +95,7 @@ const int KeyToInt(unsigned int key)
 	switch (key)
 	{
 	case App::KEY_ESC:
-		ConvertedKey = 9;
+		ConvertedKey = GK_ESCAPE;
 		break;
 	case App::KEY_TAB:
 		ConvertedKey = GK_TAB;
@@ -139,7 +194,6 @@ const int KeyToInt(unsigned int key)
 
 	return ConvertedKey;
 }
-
 
 void UltralightImpl::HandleMouse()
 {
@@ -240,32 +294,20 @@ static int on_key_released(unsigned int key)
 
 static int on_unicode_key_pressed(unsigned int key)
 {
-	if (view->HasInputFocus()) {
-		///
-		/// The View has an input element with visible keyboard focus (blinking caret).
-		/// Dispatch the keyboard event to the view and consume it.
-		///
-		//view->Focus();
-	}
+		if (key < App::KEY_ESC || key >= App::NUM_KEYS)
+		{
+			char ch = static_cast<char>(key);
+			ultralight::String ConvertedKey(&ch, 1);
 
+			// Synthesize an  event for text generated from pressing the 'A' key
+			KeyEvent evt;
+			evt.type = KeyEvent::kType_Char;
+			evt.text = ConvertedKey;
+			evt.unmodified_text = ConvertedKey; // If not available, set to same as evt.text
 
-	if (key < App::KEY_ESC || key >= App::NUM_KEYS) 
-	{
-		char ch = static_cast<char>(key);
-		ultralight::String ConvertedKey(&ch, 1);
-
-		// Synthesize an  event for text generated from pressing the 'A' key
-		KeyEvent evt;
-		evt.type = KeyEvent::kType_Char;
-		evt.text = ConvertedKey;
-		evt.unmodified_text = ConvertedKey; // If not available, set to same as evt.text
-
-		//GetKeyIdentifierFromVirtualKeyCode(evt.virtual_key_code, evt.key_identifier);
-
-		view->FireKeyEvent(evt);
-
-
-	}
+			view->FireKeyEvent(evt);
+			view->Focus();
+		}
 	return 0;
 }
 
@@ -281,7 +323,7 @@ void UltralightImpl::Init() {
 	InitPlatform();
 	CreateRenderer();
 	CreateView();
-
+	
 	///
 	/// We need to tell config where our resources are so it can 
 	/// load our bundled SSL certificates to make HTTPS requests.
@@ -305,7 +347,6 @@ void UltralightImpl::Init() {
 	///
 	Platform::instance().set_config(config);
 
-
 	gui = Gui::get();
 
 	createHUDWidgetSprite();
@@ -316,7 +357,191 @@ void UltralightImpl::Init() {
 	SetWidgetSpriteTexture(hud);
 }
 
-const char* htmlString() {
+const char* Test()
+{
+	return R"(
+)";
+}
+
+const char* Sample1() {
+	return R"(
+    <html>
+      <head>
+        <style type="text/css">
+          body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: black;
+            font-family: Arial;
+            background: linear-gradient(-45deg, #acb4ff, #f5d4e2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          div {
+            width: 350px;
+            height: 350px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(-45deg, #e5eaf9, #f9eaf6);
+            box-shadow: 0 7px 18px -6px #8f8ae1;
+          }
+          h1 {
+            padding: 1em;
+          }
+          p {
+            background: white;
+            padding: 2em;
+            margin: 40px;
+            border-radius: 25px;
+          }
+        </style>
+      </head>
+      <body>
+        <div>
+          <h1>Hello World!</h1>
+          <p>Welcome to Ultralight!</p>
+
+        </div>
+
+      </body>
+    </html>
+    )";
+}
+
+const char* Sample2() {
+	return R"(
+<html>
+  <head>
+    <style type="text/css">
+    * { -webkit-user-select: none; }
+    body { 
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: #e0e3ed;
+      background: linear-gradient(-45deg, #e0e3ed, #f7f9fc);
+      width: 900px;
+      height: 600px;
+      font-family: -apple-system, 'Segoe UI', Ubuntu, Arial, sans-serif;
+    }
+    h2, h3 {
+      margin: 0;
+    }
+    div {
+      padding: 35px;
+      margin: 10px;
+      height: 510px;
+      width: 360px;
+    }
+    p, li { 
+      font-size: 1em;
+    }
+    #leftPane {
+      float: left;
+      color: #858998;
+      padding: 85px 65px;
+      height: 410px;
+      width: 300px;
+    }
+    #leftPane p {
+      color: #858998;
+    }
+    #rightPane {
+      border-radius: 15px;
+      background-color: white;
+      float: right;
+      color: #22283d;
+      box-shadow: 0 7px 24px -6px #aaacb8;
+    }
+    #rightPane li, #rightPane p {
+      color: #7e7f8e;
+      font-size: 0.9em;
+    }
+    #rightPane li {
+      list-style-type: none;
+      padding: 0.6em 0;
+      border-radius: 20px;
+      margin: 0;
+      padding-left: 1em;
+      cursor: pointer;
+    }
+    #rightPane li:hover {
+      background-color: #f4f6fb;
+    }
+    li:before {
+      content: '';
+      display:inline-block; 
+      height: 18; 
+      width: 18;
+      margin-bottom: -5px; 
+      margin-right: 1em;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns=\
+'http://www.w3.org/2000/svg' width='18' height='18' viewBox='-2 -2 27 27'>\
+<path stroke='%23dbe2e7' stroke-width='2' fill='white' d='M12 0c-6.627 0-12 \
+5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z'/></svg>");
+    }
+    li.checked:before {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns=\
+'http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'><path \
+fill='%2334d7d6' d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 \
+12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 \
+5.643-5.784 1.857 1.857-7.5 7.643z'/></svg>");
+    }
+    #rightPane h5 {
+      border-bottom: 1px solid #eceef0;
+      padding-bottom: 9px;
+      margin-bottom: 1em;
+      margin-top: 3em;
+    }
+    #rightPane h5 {
+      padding-left: 1em;
+    }
+    #rightPane ul {
+      padding-left: 0;
+    }
+    </style>
+    <script>
+      window.onload = function() {
+        var listItems = document.getElementsByTagName('li');
+        for(var i = 0; i < listItems.length; i++) {
+          listItems[i].onclick = function() {
+            this.classList.toggle('checked');
+          }
+        }
+      }
+  </script>
+  </head>
+  <body>
+    <div id="leftPane">
+      <h2>My Planner App</h2>
+      <p>Welcome to Ultralight Tutorial 2!</p>
+    </div>
+    <div id="rightPane">
+      <h3>Upcoming Tasks</h3>
+      <p>Click a task to mark it as completed.</p>
+      <h5>Today</h5>
+      <ul>
+        <li class="checked">Create layout for initial mockup</li>
+        <li class="checked">Select icons for mobile interface</li>
+        <li class="checked">Discussions regarding new sorting algorithm</li>
+        <li class="checked">Call with automotive clients</li>
+        <li>Create quote for the Tesla remodel</li>
+      </ul>
+      <h5>Upcoming</h5>
+      <ul>
+        <li>Plan itinerary for conference</li>
+        <li>Discuss desktop workflow optimizations</li>
+        <li>Performance improvement analysis</li>
+      </ul>
+    </div>
+  </body>
+</html>
+)";
+}
+
+const char* Sample4() {
 	return R"(
 <html>
   <head>
@@ -367,6 +592,22 @@ const char* htmlString() {
     )";
 }
 
+///
+/// This is called continuously from the app's main run loop. You should
+/// update any app logic inside this callback.
+///
+void OnUpdate(void* user_data) {
+	/// We don't use this in this tutorial, just here for example.
+}
+
+///
+/// This is called whenever the window resizes. Width and height are in
+/// DPI-independent logical coordinates (not pixels).
+///
+void OnResize(void* user_data, unsigned int width, unsigned int height) {
+	//ulOverlayResize(overlay, width, height);
+}
+
 void UltralightImpl::InitPlatform() {
 	/// 
 	/// Use the OS's native font loader
@@ -397,7 +638,8 @@ void UltralightImpl::CreateRenderer() {
 	renderer = ultralight::Renderer::Create();
 }
 
-void UltralightImpl::CreateView() {
+void UltralightImpl::CreateView() 
+{
 	///
 	/// Create an HTML view, 500 by 500 pixels large.
 	///
@@ -406,17 +648,21 @@ void UltralightImpl::CreateView() {
 	///
 	/// Load a raw string of HTML.
 	///
-	//view->LoadHTML(htmlString());
+	view->LoadURL("file:///Test.html");
+	//view->LoadHTML(Sample1());
+	//view->LoadHTML(Sample2());
+	//view->LoadHTML(Sample4());
+	//view->LoadURL("file:///sample5.html");
+	//view->LoadURL("file:///sample6.html");
 
-	view->LoadURL("file:///app.html");
 	///
 	/// Notify the View it has input focus (updates appearance).
 	///
 	view->Focus();
 
 	///
-/// Get the pixel-buffer Surface for a View.
-///
+	/// Get the pixel-buffer Surface for a View.
+	///
 	Surface* surface = view->surface();
 
 	///
@@ -428,6 +674,10 @@ void UltralightImpl::CreateView() {
 	/// Get the underlying bitmap.
 	///
 	RefPtr<Bitmap> bitmap = bitmap_surface->bitmap();
+
+	//MyListener kees = MyListener(view);
+
+		view->set_load_listener(new MyListener());
 }
 
 void UltralightImpl::UpdateLogic() {
@@ -436,6 +686,7 @@ void UltralightImpl::UpdateLogic() {
 	///
 	///
 	renderer->Update();
+	view->Focus();
 }
 
 void CopyBitmapToTexture(RefPtr<Bitmap> bitmap) {
@@ -473,6 +724,9 @@ void UltralightImpl::RenderOneFrame() {
 	///
 	renderer->Render();
 
+	HandleMouse();
+
+
 	///
 	/// Psuedo-code to loop through all active Views.
 	///
@@ -482,17 +736,14 @@ void UltralightImpl::RenderOneFrame() {
 		///
 		BitmapSurface* surface = (BitmapSurface*)(view->surface());
 
-		HandleMouse();
-
 		///
 		/// Check if our Surface is dirty (pixels have changed).
 		///
 		if (!surface->dirty_bounds().IsEmpty()) {
-			///
+	
 			/// Psuedo-code to upload Surface's bitmap to GPU texture.
 			///
 			CopyBitmapToTexture(surface->bitmap());
-
 			///
 			/// Clear the dirty bounds.
 			///

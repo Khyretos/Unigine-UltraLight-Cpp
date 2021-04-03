@@ -1,6 +1,15 @@
 #pragma once
 #include "Ultralight\Ultralight.h"
 
+#include "UltralightImpl.h"
+#include <AppCore/Platform.h>
+#include <AppCore/Overlay.h>
+#include <AppCore/JSHelpers.h>
+#include <Ultralight/String.h>
+#include <AppCore/CAPI.h>
+#include <JavaScriptCore/JavaScript.h>
+
+
 #include <UnigineLogic.h>
 #include <UnigineStreams.h>
 
@@ -14,6 +23,7 @@
 
 class UltralightImpl
 {
+
 public:
 	static void Init();
 	static void InitPlatform();
@@ -33,5 +43,5 @@ public:
 	static int SetWidgetSpriteTexture(Unigine::WidgetSpritePtr sprite);
 
 	static void HandleMouse();
-
+	
 };
