@@ -14,6 +14,8 @@
 
 #include "AppWorldLogic.h"
 
+using namespace Unigine;
+
 // World logic, it takes effect only when the world is loaded.
 // These methods are called right after corresponding world script's (UnigineScript) methods.
 
@@ -28,6 +30,7 @@ AppWorldLogic::~AppWorldLogic()
 int AppWorldLogic::init()
 {
 	// Write here code to be called on world initialization: initialize resources for your world scene during the world start.
+
 	return 1;
 }
 
@@ -78,3 +81,4 @@ int AppWorldLogic::restore(const Unigine::StreamPtr &stream)
 	UNIGINE_UNUSED(stream);
 	return 1;
 }
+

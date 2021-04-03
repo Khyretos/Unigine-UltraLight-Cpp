@@ -1,11 +1,9 @@
 #include "UltralightImpl.h"
 #include <AppCore/Platform.h>
 
-#include <UnigineApp.h>
-#include <UnigineTextures.h>
 #include <UnigineMeshDynamic.h>
-#include <UnigineMaterials.h>
 #include <UnigineRender.h>
+#include <UnigineWidgets.h>
 
 using namespace Unigine;
 using namespace ultralight;
@@ -22,6 +20,16 @@ RefPtr<Bitmap> bitmap;
 static TexturePtr texture;
 static MeshDynamicPtr ultralight_mesh;
 static MaterialPtr ultralight_material;
+
+WidgetLabelPtr widget_label;
+TexturePtr my_texture;
+TexturePtr my_texture_ds;
+
+WidgetSpritePtr hud;
+GuiPtr gui;
+
+//WidgetSpritePtr hud;
+//WidgetLabelPtr widget_label;
 
 void UltralightImpl::Init() {
 	Config config;
@@ -50,9 +58,62 @@ void UltralightImpl::Init() {
 	Platform::instance().set_config(config);
 
 
+	gui = Gui::get();
+
+	createHUDWidgetSprite();
+
 	create_Ultralight_mesh();
 	create_Ultralight_material();
+
+	SetWidgetSpriteTexture(hud);
 }
+
+
+const char* htmlString() {
+	return R"(
+    <html>
+      <head>
+        <style type="text/css">
+          body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: black;
+            font-family: Arial;
+            background: linear-gradient(-45deg, #acb4ff, #f5d4e2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          div {
+            width: 350px;
+            height: 350px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(-45deg, #e5eaf9, #f9eaf6);
+            box-shadow: 0 7px 18px -6px #8f8ae1;
+          }
+          h1 {
+            padding: 1em;
+          }
+          p {
+            background: white;
+            padding: 2em;
+            margin: 40px;
+            border-radius: 25px;
+          }
+        </style>
+      </head>
+      <body>
+        <div>
+          <h1>Hello World!</h1>
+          <p>Welcome to Ultralight!</p>
+        </div>
+      </body>
+    </html>
+    )";
+}
+
 
 void UltralightImpl::InitPlatform() {
 	///
@@ -93,7 +154,7 @@ void UltralightImpl::CreateView() {
 	///
 	/// Load a raw string of HTML.
 	///
-	view->LoadHTML("<h1>Hello World!</h1>");
+	view->LoadHTML(htmlString());
 
 	///
 	/// Notify the View it has input focus (updates appearance).
@@ -117,6 +178,14 @@ void UltralightImpl::CreateView() {
 	RefPtr<Bitmap> bitmap = bitmap_surface->bitmap();
 }
 
+void UltralightImpl::UpdateLogic() {
+	///
+	/// Give the library a chance to handle any pending tasks and timers.
+	///
+	///
+	renderer->Update();
+}
+
 void CopyBitmapToTexture(RefPtr<Bitmap> bitmap) {
 	///
 	/// Lock the Bitmap to retrieve the raw pixels.
@@ -134,20 +203,12 @@ void CopyBitmapToTexture(RefPtr<Bitmap> bitmap) {
 	///
 	/// Psuedo-code to upload our pixels to a GPU texture.
 	///
-	UltralightImpl::CreateTexture(pixels, width, height, stride);
+	UltralightImpl::CreateTexture(hud, pixels, width, height, stride);
 
 	///
 	/// Unlock the Bitmap when we are done.
 	///
 	bitmap->UnlockPixels();
-}
-
-void UltralightImpl::UpdateLogic() {
-	///
-	/// Give the library a chance to handle any pending tasks and timers.
-	///
-	///
-	renderer->Update();
 }
 
 void UltralightImpl::RenderOneFrame() {
@@ -182,16 +243,20 @@ void UltralightImpl::RenderOneFrame() {
 	//}
 }
 
-void UltralightImpl::CreateTexture(void* pixels, uint32_t width, uint32_t height, uint32_t stride)
+void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels, uint32_t width, uint32_t height, uint32_t stride)
 {
 	texture = Texture::create();
 	texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
 
 	auto blob = Blob::create();
 	auto kees = static_cast<unsigned char*>(pixels);
-	blob->setData(kees, width * height * stride);
+	blob->setData(kees,stride);
 	texture->setBlob(blob);
 	blob->setData(nullptr, 0);
+
+
+	sprite->setRender(texture);
+
 }
 
 void UltralightImpl::create_Ultralight_mesh()
@@ -216,4 +281,30 @@ void UltralightImpl::create_Ultralight_mesh()
 void UltralightImpl::create_Ultralight_material()
 {
 	ultralight_material = Materials::findMaterial("ultralight")->inherit();
+}
+
+void UltralightImpl::createHUDWidgetSprite()
+{
+	GuiPtr gui = Gui::get();
+	hud = WidgetSprite::create(gui);
+	hud->setPosition(0, 0);
+	hud->setWidth(500);
+	hud->setHeight(500);
+	hud->setLayerBlendFunc(0, Gui::BLEND_ONE, Gui::BLEND_ONE_MINUS_SRC_ALPHA);
+
+	gui->addChild(hud, Gui::ALIGN_OVERLAP);
+}
+
+int UltralightImpl::SetWidgetSpriteTexture(Unigine::WidgetSpritePtr sprite)
+{
+	my_texture = Texture::create();
+
+	const int width = 500;//int(view->GetWidth());
+	const int height = 500;//int(view->GetHeight());
+	int flags = Unigine::Texture::FILTER_LINEAR | Unigine::Texture::USAGE_RENDER;
+	my_texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
+
+	sprite->setRender(my_texture);
+
+	return 1;
 }

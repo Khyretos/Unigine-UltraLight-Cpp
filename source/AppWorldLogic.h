@@ -18,9 +18,6 @@
 #include <UnigineLogic.h>
 #include <UnigineStreams.h>
 
-
-
-
 class AppWorldLogic : public Unigine::WorldLogic
 {
 
