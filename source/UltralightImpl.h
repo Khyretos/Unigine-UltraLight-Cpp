@@ -32,6 +32,6 @@ public:
 
 	static int SetWidgetSpriteTexture(Unigine::WidgetSpritePtr sprite);
 
-
+	static void HandleMouse();
 
 };

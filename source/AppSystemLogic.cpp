@@ -37,9 +37,7 @@ int AppSystemLogic::init()
 {
 	// Write here code to be called on engine initialization.
 	UltralightImpl::Init();
-	UltralightImpl::InitPlatform();
-	UltralightImpl::CreateRenderer();
-	UltralightImpl::CreateView();
+	
 	return 1;
 }
 
@@ -52,8 +50,6 @@ int AppSystemLogic::update()
 	// Write here code to be called before updating each render frame.
 	UltralightImpl::UpdateLogic();
 	UltralightImpl::RenderOneFrame();
-	
-
 	return 1;
 }
 
