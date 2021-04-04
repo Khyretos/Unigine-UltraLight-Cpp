@@ -195,7 +195,7 @@ const int KeyToInt(unsigned int key)
 	return ConvertedKey;
 }
 
-void UltralightImpl::HandleMouse()
+void HandleMouse()
 {
 	MouseEvent evt;
 	evt.type = MouseEvent::kType_MouseMoved;
@@ -306,7 +306,6 @@ static int on_unicode_key_pressed(unsigned int key)
 			evt.unmodified_text = ConvertedKey; // If not available, set to same as evt.text
 
 			view->FireKeyEvent(evt);
-			view->Focus();
 		}
 	return 0;
 }
@@ -350,16 +349,29 @@ void UltralightImpl::Init() {
 	gui = Gui::get();
 
 	createHUDWidgetSprite();
-
-	create_Ultralight_mesh();
-	create_Ultralight_material();
-
-	SetWidgetSpriteTexture(hud);
 }
 
 const char* Test()
 {
 	return R"(
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-color Property</h1>
+
+<p>The background color can be specified with a color name.</p>
+
+</body>
+</html>
+
 )";
 }
 
@@ -649,6 +661,7 @@ void UltralightImpl::CreateView()
 	/// Load a raw string of HTML.
 	///
 	view->LoadURL("file:///Test.html");
+	//view->LoadHTML(Test());
 	//view->LoadHTML(Sample1());
 	//view->LoadHTML(Sample2());
 	//view->LoadHTML(Sample4());
@@ -766,30 +779,6 @@ void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels,
 	sprite->setRender(texture);
 }
 
-void UltralightImpl::create_Ultralight_mesh()
-{
-	ultralight_mesh = MeshDynamic::create(MeshDynamic::DYNAMIC_ALL);
-
-	MeshDynamic::Attribute attributes[3]{};
-	attributes[0].offset = 0;
-	attributes[0].size = 2;
-	attributes[0].type = MeshDynamic::TYPE_FLOAT;
-	attributes[1].offset = 8;
-	attributes[1].size = 2;
-	attributes[1].type = MeshDynamic::TYPE_FLOAT;
-	attributes[2].offset = 16;
-	attributes[2].size = 4;
-	attributes[2].type = MeshDynamic::TYPE_UCHAR;
-	ultralight_mesh->setVertexFormat(attributes, 3);
-
-	//assert(ultralight_mesh->getVertexSize() == sizeof(ImDrawVert) && "Vertex size of MeshDynamic is not equal to size of ImDrawVert");
-}
-
-void UltralightImpl::create_Ultralight_material()
-{
-	ultralight_material = Materials::findMaterial("ultralight")->inherit();
-}
-
 void UltralightImpl::createHUDWidgetSprite()
 {
 	GuiPtr gui = Gui::get();
@@ -800,18 +789,4 @@ void UltralightImpl::createHUDWidgetSprite()
 	hud->setLayerBlendFunc(0, Gui::BLEND_ONE, Gui::BLEND_ONE_MINUS_SRC_ALPHA);
 
 	gui->addChild(hud, Gui::ALIGN_OVERLAP);
-}
-
-int UltralightImpl::SetWidgetSpriteTexture(Unigine::WidgetSpritePtr sprite)
-{
-	my_texture = Texture::create();
-
-	const int width = int(view->width());
-	const int height = int(view->height());
-	int flags = Unigine::Texture::FILTER_LINEAR | Unigine::Texture::USAGE_RENDER;
-	my_texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
-
-	sprite->setRender(my_texture);
-
-	return 1;
 }
