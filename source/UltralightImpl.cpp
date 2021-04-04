@@ -658,7 +658,7 @@ void UltralightImpl::CreateView()
 	///
 	/// Create an HTML view, 500 by 500 pixels large.
 	///
-	view = renderer->CreateView(900, 600, false, nullptr);
+	view = renderer->CreateView(900, 600, true, nullptr);
 
 	///
 	/// Load a raw string of HTML.
