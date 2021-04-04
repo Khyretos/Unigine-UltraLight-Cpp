@@ -183,10 +183,13 @@ const int KeyToInt(unsigned int key)
 		break;
 	case App::KEY_F10:
 		ConvertedKey = GK_F10;
+		break;
 	case App::KEY_F11:
 		ConvertedKey = GK_F11;
+		break;
 	case App::KEY_F12:
 		ConvertedKey = GK_F12;
+		break;
 	case App::NUM_KEYS:
 		ConvertedKey = GK_NUMPAD0;
 		break;
@@ -697,7 +700,6 @@ void UltralightImpl::UpdateLogic() {
 	///
 	///
 	renderer->Update();
-	view->Focus();
 }
 
 void CopyBitmapToTexture(RefPtr<Bitmap> bitmap) {
@@ -736,7 +738,6 @@ void UltralightImpl::RenderOneFrame() {
 	renderer->Render();
 
 	HandleMouse();
-
 
 	///
 	/// Psuedo-code to loop through all active Views.
