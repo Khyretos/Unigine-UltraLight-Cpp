@@ -688,9 +688,7 @@ void UltralightImpl::CreateView()
 	///
 	RefPtr<Bitmap> bitmap = bitmap_surface->bitmap();
 
-	//MyListener kees = MyListener(view);
-
-		view->set_load_listener(new MyListener());
+	view->set_load_listener(new MyListener());
 }
 
 void UltralightImpl::UpdateLogic() {
@@ -771,8 +769,8 @@ void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels,
 	texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
 
 	auto blob = Blob::create();
-	auto kees = static_cast<unsigned char*>(pixels);
-	blob->setData(kees,stride);
+	auto ConvertedPixels = static_cast<unsigned char*>(pixels);
+	blob->setData(ConvertedPixels,stride);
 	texture->setBlob(blob);
 	blob->setData(nullptr, 0);
 

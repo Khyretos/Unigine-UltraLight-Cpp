@@ -35,13 +35,7 @@ public:
 	static void RenderOneFrame();
 	static void UpdateLogic();
 	static void CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels, uint32_t width, uint32_t height, uint32_t stride);
-	static void create_Ultralight_mesh();
-	static void create_Ultralight_material();
 
 	static void createHUDWidgetSprite();
-
-	static int SetWidgetSpriteTexture(Unigine::WidgetSpritePtr sprite);
-
-	static void HandleMouse();
 	
 };
