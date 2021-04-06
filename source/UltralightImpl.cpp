@@ -1,16 +1,26 @@
 #include "UltralightImpl.h"
-#include <AppCore/Platform.h>
-#include <AppCore/Overlay.h>
-#include <AppCore/JSHelpers.h>
-#include <Ultralight/String.h>
-#include <AppCore/CAPI.h>
-#include <JavaScriptCore/JavaScript.h>
-#include <JavaScriptCore/JSRetainPtr.h>
+
+// + Ultralight
+#include "AppCore/JSHelpers.h"
+#include "AppCore/Platform.h"
+#include "AppCore/Overlay.h"
+#include "AppCore/CAPI.h"
+
+#include "JavaScriptCore/JSRetainPtr.h"
+#include "JavaScriptCore/JavaScript.h"
+
+#include "Ultralight/Geometry.h"
+#include "Ultralight/Defines.h" 
+#include "Ultralight/String.h"
+#include "Ultralight/Matrix.h"
+#include "Ultralight/Bitmap.h"
+// - Ultralight
 
 #include <UnigineMeshDynamic.h>
+#include <UnigineMaterials.h>
+#include <UnigineTextures.h>
 #include <UnigineRender.h>
-#include <UnigineWidgets.h>
-#include "UnigineApp.h"
+#include <UnigineApp.h>
 
 using namespace Unigine;
 using namespace ultralight;
@@ -25,6 +35,7 @@ RefPtr<View> view;
 
 RefPtr<Bitmap> bitmap;
 
+static BlobPtr blob;
 static TexturePtr texture;
 static MeshDynamicPtr ultralight_mesh;
 static MaterialPtr ultralight_material;
@@ -350,6 +361,10 @@ void UltralightImpl::Init() {
 	Platform::instance().set_config(config);
 
 	gui = Gui::get();
+	texture = Texture::create();
+	blob = Blob::create();
+
+	//Platform::instance().set_gpu_driver(custom_gpu_driver_instance);
 
 	createHUDWidgetSprite();
 }
@@ -653,6 +668,145 @@ void UltralightImpl::CreateRenderer() {
 	renderer = ultralight::Renderer::Create();
 }
 
+static void create_imgui_mesh()
+{
+	Ultralight_mesh = MeshDynamic::create(MeshDynamic::DYNAMIC_ALL);
+
+	MeshDynamic::Attribute attributes[3]{};
+	attributes[0].offset = 0;
+	attributes[0].size = 2;
+	attributes[0].type = MeshDynamic::TYPE_FLOAT;
+	attributes[1].offset = 8;
+	attributes[1].size = 2;
+	attributes[1].type = MeshDynamic::TYPE_FLOAT;
+	attributes[2].offset = 16;
+	attributes[2].size = 4;
+	attributes[2].type = MeshDynamic::TYPE_UCHAR;
+	Ultralight_mesh->setVertexFormat(attributes, 3);
+
+	//assert(imgui_mesh->getVertexSize() == sizeof(ImDrawVert) && "Vertex size of MeshDynamic is not equal to size of ImDrawVert");
+}
+
+static void create_imgui_material()
+{
+	Ultralight_material = Materials::findMaterial("ultralight")->inherit();
+}
+
+static void draw_callback()
+{
+	//if (frame_draw_data == nullptr)
+	//	return;
+
+	//auto draw_data = frame_draw_data;
+	//frame_draw_data = nullptr;
+
+	//if (draw_data->DisplaySize.x <= 0.0f || draw_data->DisplaySize.y <= 0.0f)
+	//	return;
+
+
+	//// Write vertex and index data into dynamic mesh
+	//imgui_mesh->clearVertex();
+	//imgui_mesh->clearIndices();
+	//imgui_mesh->allocateVertex(draw_data->TotalVtxCount);
+	//imgui_mesh->allocateIndices(draw_data->TotalIdxCount);
+	//for (int i = 0; i < draw_data->CmdListsCount; ++i)
+	//{
+	//	const ImDrawList* cmd_list = draw_data->CmdLists[i];
+
+	//	imgui_mesh->addVertexArray(cmd_list->VtxBuffer.Data, cmd_list->VtxBuffer.Size);
+	//	imgui_mesh->addIndicesArray(cmd_list->IdxBuffer.Data, cmd_list->IdxBuffer.Size);
+	//}
+	//imgui_mesh->flushVertex();
+	//imgui_mesh->flushIndices();
+
+
+	//auto render_target = Render::getTemporaryRenderTarget();
+	//render_target->bindColorTexture(0, Renderer::getTextureColor());
+
+	//// Render state
+	//RenderState::saveState();
+	//RenderState::clearStates();
+	//RenderState::setBlendFunc(RenderState::BLEND_SRC_ALPHA, RenderState::BLEND_ONE_MINUS_SRC_ALPHA, RenderState::BLEND_OP_ADD);
+	//RenderState::setPolygonCull(RenderState::CULL_NONE);
+	//RenderState::setDepthFunc(RenderState::DEPTH_NONE);
+	//RenderState::setViewport(static_cast<int>(draw_data->DisplayPos.x), static_cast<int>(draw_data->DisplayPos.y),
+	//	static_cast<int>(draw_data->DisplaySize.x), static_cast<int>(draw_data->DisplaySize.y));
+
+	//// Orthographic projection matrix
+	//float left = draw_data->DisplayPos.x;
+	//float right = draw_data->DisplayPos.x + draw_data->DisplaySize.x;
+	//float top = draw_data->DisplayPos.y;
+	//float bottom = draw_data->DisplayPos.y + draw_data->DisplaySize.y;
+
+	//Math::Mat4 proj;
+	//proj.m00 = 2.0f / (right - left);
+	//proj.m03 = (right + left) / (left - right);
+	//proj.m11 = 2.0f / (top - bottom);
+	//proj.m13 = (top + bottom) / (bottom - top);
+	//proj.m22 = 0.5f;
+	//proj.m23 = 0.5f;
+	//proj.m33 = 1.0f;
+
+	//Renderer::setProjection(proj);
+	//auto shader = imgui_material->fetchShader("imgui");
+	//auto pass = imgui_material->getRenderPass("imgui");
+	//Renderer::setShaderParameters(pass, shader, imgui_material, false);
+
+
+	//imgui_mesh->bind();
+	//render_target->enable();
+	//{
+	//	int global_idx_offset = 0;
+	//	int global_vtx_offset = 0;
+	//	ImVec2 clip_off = draw_data->DisplayPos;
+	//	// Draw command lists
+	//	for (int i = 0; i < draw_data->CmdListsCount; ++i)
+	//	{
+	//		const ImDrawList* cmd_list = draw_data->CmdLists[i];
+	//		for (int j = 0; j < cmd_list->CmdBuffer.Size; ++j)
+	//		{
+	//			const ImDrawCmd* cmd = &cmd_list->CmdBuffer[j];
+
+	//			if (cmd->UserCallback != nullptr)
+	//			{
+	//				if (cmd->UserCallback != ImDrawCallback_ResetRenderState)
+	//					cmd->UserCallback(cmd_list, cmd);
+	//			}
+	//			else
+	//			{
+	//				float width = (cmd->ClipRect.z - cmd->ClipRect.x) / draw_data->DisplaySize.x;
+	//				float height = (cmd->ClipRect.w - cmd->ClipRect.y) / draw_data->DisplaySize.y;
+	//				float x = (cmd->ClipRect.x - clip_off.x) / draw_data->DisplaySize.x;
+	//				float y = 1.0f - height - (cmd->ClipRect.y - clip_off.y) / draw_data->DisplaySize.y;
+
+	//				RenderState::setScissorTest(x, y, width, height);
+	//				RenderState::flushStates();
+
+	//				auto texture = TexturePtr(static_cast<Texture*>(cmd->TextureId));
+	//				imgui_material->setTexture("imgui_texture", texture);
+
+	//				imgui_mesh->renderInstancedSurface(MeshDynamic::MODE_TRIANGLES,
+	//					cmd->VtxOffset + global_vtx_offset,
+	//					cmd->IdxOffset + global_idx_offset,
+	//					cmd->IdxOffset + global_idx_offset + cmd->ElemCount, 1);
+	//			}
+	//		}
+	//		global_vtx_offset += cmd_list->VtxBuffer.Size;
+	//		global_idx_offset += cmd_list->IdxBuffer.Size;
+
+	//	}
+	//}
+	//render_target->disable();
+	//imgui_mesh->unbind();
+
+	//RenderState::restoreState();
+
+	//render_target->unbindColorTexture(0);
+	//Render::releaseTemporaryRenderTarget(render_target);
+}
+
+static void* draw_callback_handle;
+
 void UltralightImpl::CreateView() 
 {
 	///
@@ -663,11 +817,11 @@ void UltralightImpl::CreateView()
 	///
 	/// Load a raw string of HTML.
 	///
-	view->LoadURL("file:///Test.html");
+	//view->LoadURL("file:///Test.html");
 	//view->LoadHTML(Test());
 	//view->LoadHTML(Sample1());
 	//view->LoadHTML(Sample2());
-	//view->LoadHTML(Sample4());
+	view->LoadHTML(Sample4());
 	//view->LoadURL("file:///sample5.html");
 	//view->LoadURL("file:///sample6.html");
 
@@ -765,13 +919,12 @@ void UltralightImpl::RenderOneFrame() {
 }
 
 void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels, uint32_t width, uint32_t height, uint32_t stride)
-{
-	texture = Texture::create();
+{ 
 	texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
 
-	auto blob = Blob::create();
 	auto ConvertedPixels = static_cast<unsigned char*>(pixels);
 	blob->setData(ConvertedPixels,stride);
+
 	texture->setBlob(blob);
 	blob->setData(nullptr, 0);
 
@@ -780,7 +933,6 @@ void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels,
 
 void UltralightImpl::createHUDWidgetSprite()
 {
-	GuiPtr gui = Gui::get();
 	hud = WidgetSprite::create(gui);
 	hud->setPosition(0, 0);
 	hud->setWidth(900);
@@ -788,4 +940,19 @@ void UltralightImpl::createHUDWidgetSprite()
 	hud->setLayerBlendFunc(0, Gui::BLEND_ONE, Gui::BLEND_ONE_MINUS_SRC_ALPHA);
 
 	gui->addChild(hud, Gui::ALIGN_OVERLAP);
+}
+
+void UltralightImpl::shutdown()
+{
+	Ultralight_material->deleteLater();
+	Ultralight_mesh->deleteLater();
+	font_texture->deleteLater();
+
+	Render::removeCallback(Render::CALLBACK_END_SCREEN, draw_callback_handle);
+
+	App::setKeyPressFunc(nullptr);
+	App::setKeyReleaseFunc(nullptr);
+	App::setButtonPressFunc(nullptr);
+	App::setButtonReleaseFunc(nullptr);
+	App::setKeyPressUnicodeFunc(nullptr);
 }

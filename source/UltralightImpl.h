@@ -37,5 +37,5 @@ public:
 	static void CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels, uint32_t width, uint32_t height, uint32_t stride);
 
 	static void createHUDWidgetSprite();
-	
+	static void shutdown();
 };

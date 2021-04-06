@@ -50,7 +50,7 @@ BaseMaterial ultralight <editable=false var_prefix=var texture_prefix=tex>
 				float2 uv = IN_DATA(0);
 				//uv.y = 1.0f - uv.y;
 
-				OUT_COLOR = IN_DATA(1) * TEXTURE(tex_imgui_texture, uv);
+				OUT_COLOR = IN_DATA(1) * TEXTURE(tex_ultralight_texture, uv);
 				//OUT_COLOR = float4(uv, 0.0f, 1.0f);
 			MAIN_END
 
