@@ -1,2 +1,2 @@
 # UltraLightCpp
- Ultralight integration with Unigine
+ Ultralight integration with Unigine (C++)
