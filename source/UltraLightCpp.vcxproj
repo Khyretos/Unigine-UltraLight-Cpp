@@ -72,6 +72,7 @@
     <ClCompile Include="AppEditorLogic.cpp" />
     <ClCompile Include="AppSystemLogic.cpp" />
     <ClCompile Include="AppWorldLogic.cpp" />
+    <ClCompile Include="LoggerDefault.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UltralightImpl.cpp" />
   </ItemGroup>
@@ -79,6 +80,7 @@
     <ClInclude Include="AppEditorLogic.h" />
     <ClInclude Include="AppSystemLogic.h" />
     <ClInclude Include="AppWorldLogic.h" />
+    <ClInclude Include="LoggerDefault.h" />
     <ClInclude Include="UltralightImpl.h" />
   </ItemGroup>
   <ItemGroup>

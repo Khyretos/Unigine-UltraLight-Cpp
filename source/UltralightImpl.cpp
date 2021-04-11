@@ -14,38 +14,44 @@
 #include "Ultralight/String.h"
 #include "Ultralight/Matrix.h"
 #include "Ultralight/Bitmap.h"
+#include "Ultralight/Ultralight.h"
 // - Ultralight
 
+// + Unigine
 #include <UnigineMeshDynamic.h>
 #include <UnigineMaterials.h>
 #include <UnigineTextures.h>
 #include <UnigineRender.h>
 #include <UnigineApp.h>
+// - Unigine
 
 using namespace Unigine;
 using namespace ultralight;
 using namespace KeyCodes;
 
+// + UltralightSharp
+RefPtr<View> view;
+RefPtr<Bitmap> bitmap;
+RefPtr<ultralight::Renderer> renderer;
+// - UltralightSharp
+
+// + Unigine
+static BlobPtr blob;
+static TexturePtr texture;
 static TexturePtr font_texture;
 static MeshDynamicPtr Ultralight_mesh;
 static MaterialPtr Ultralight_material;
 
-RefPtr<ultralight::Renderer> renderer;
-RefPtr<View> view;
+static int saved_mouse = 0;
 
-RefPtr<Bitmap> bitmap;
-
-static BlobPtr blob;
-static TexturePtr texture;
-static MeshDynamicPtr ultralight_mesh;
-static MaterialPtr ultralight_material;
-
-WidgetLabelPtr widget_label;
+GuiPtr gui;
+WidgetSpritePtr hud;
 TexturePtr my_texture;
 TexturePtr my_texture_ds;
+WidgetLabelPtr widget_label;
 
-WidgetSpritePtr hud;
-GuiPtr gui;
+int Ultralight_Gui_Id;
+// - Unigine
 
 class MyListener : public LoadListener {
 public:
@@ -53,6 +59,8 @@ public:
 	virtual ~MyListener() {}
 
 	JSValue GetMessage(const JSObject& thisObject, const JSArgs& args) {
+		//auto lol = JSStringCreateWithUTF8CString();
+
 		///
 		/// Return our message to JavaScript as a JSValue.
 		///
@@ -98,6 +106,18 @@ public:
 		global["GetMessage"] = BindJSCallbackWithRetval(&MyListener::GetMessage);
 	}
 };
+
+bool mouse_is_over_unigine_widget(WidgetPtr w)
+{
+	if (w->isHidden())
+		return false;
+
+	bool r = ((gui->getMouseX() > 0) && (gui->getMouseY() > 0) && ((gui->getMouseX() < hud->getWidth()) && (gui->getMouseY() < hud->getHeight())));
+	{
+		hud->setHidden(!r);
+		return r;
+	}
+}
 
 const int KeyToInt(unsigned int key)
 {
@@ -236,8 +256,15 @@ static int on_button_pressed(int button)
 		evt.button = MouseEvent::kButton_Left;
 		break;
 	case App::BUTTON_MIDDLE:
-		evt.button = MouseEvent::kButton_Left;
+		evt.button = MouseEvent::kButton_Middle;
 		break;
+	}
+
+	if (mouse_is_over_unigine_widget(gui->getChild(Ultralight_Gui_Id)))
+	{
+		saved_mouse = App::getMouseButton();
+		App::setMouseButton(0);
+		Gui::get()->setMouseButton(0);
 	}
 
 	view->FireMouseEvent(evt);
@@ -258,12 +285,18 @@ static int on_button_released(int button)
 		evt.button = MouseEvent::kButton_Left;
 		break;
 	case App::BUTTON_RIGHT:
-		evt.button = MouseEvent::kButton_Left;
+		evt.button = MouseEvent::kButton_Right;
 		break;
 	case App::BUTTON_MIDDLE:
-		evt.button = MouseEvent::kButton_Left;
+		evt.button = MouseEvent::kButton_Middle;
 		break;
 	}
+
+	if (mouse_is_over_unigine_widget(gui->getChild(Ultralight_Gui_Id)))
+	{
+		Gui::get()->setMouseButton(saved_mouse);
+	}
+
 
 	view->FireMouseEvent(evt);
 
@@ -272,6 +305,9 @@ static int on_button_released(int button)
 
 static int on_key_pressed(unsigned int key)
 {
+	if (key == App::KEY_ESC)
+		hud->setHidden(gui->isHidden());
+
 	// Synthesize a key press event for the 'Right Arrow' key
 	KeyEvent evt;
 	evt.type = KeyEvent::kType_RawKeyDown;
@@ -342,6 +378,7 @@ void UltralightImpl::Init() {
 	/// load our bundled SSL certificates to make HTTPS requests.
 	///
 	config.resource_path = "./resources/";
+
 
 	///
 	/// The GPU renderer should be disabled to render Views to a 
@@ -656,7 +693,7 @@ void UltralightImpl::InitPlatform() {
 	Platform::instance().set_logger(GetDefaultLogger("ultralight.log"));
 }
 
-void UltralightImpl::CreateRenderer() {
+bool UltralightImpl::CreateRenderer() {
 	///
 	/// Create our Renderer (call this only once per application).
 	/// 
@@ -666,6 +703,12 @@ void UltralightImpl::CreateRenderer() {
 	/// You should set up the Platform handlers before this.
 	///
 	renderer = ultralight::Renderer::Create();
+	if (renderer.get() == nullptr)
+	{
+		return false;
+	}
+
+	return true;
 }
 
 static void create_imgui_mesh()
@@ -807,12 +850,16 @@ static void draw_callback()
 
 static void* draw_callback_handle;
 
-void UltralightImpl::CreateView() 
+int UltralightImpl::CreateView() 
 {
 	///
 	/// Create an HTML view, 500 by 500 pixels large.
 	///
-	view = renderer->CreateView(900, 600, true, nullptr);
+	//view = renderer->CreateView(App::getWidth(), App::getHeight(), true, nullptr);
+	view = renderer->CreateView(500, 500, true, nullptr);
+
+	if (renderer.get() == nullptr)
+		return 0;
 
 	///
 	/// Load a raw string of HTML.
@@ -846,6 +893,8 @@ void UltralightImpl::CreateView()
 	RefPtr<Bitmap> bitmap = bitmap_surface->bitmap();
 
 	view->set_load_listener(new MyListener());
+
+	return 1;
 }
 
 void UltralightImpl::UpdateLogic() {
@@ -860,27 +909,14 @@ void CopyBitmapToTexture(RefPtr<Bitmap> bitmap) {
 
 	bitmap->SwapRedBlueChannels();
 
-	///
-	/// Lock the Bitmap to retrieve the raw pixels.
-	/// The format is BGRA, 8-bpp, premultiplied alpha.
-	///
 	void* pixels = bitmap->LockPixels();
 
-	///
-	/// Get the bitmap dimensions.
-	///
 	uint32_t width = bitmap->width();
 	uint32_t height = bitmap->height();
 	uint32_t stride = bitmap->row_bytes();
 
-	///
-	/// Psuedo-code to upload our pixels to a GPU texture.
-	///
 	UltralightImpl::CreateTexture(hud, pixels, width, height, stride);
 
-	///
-	/// Unlock the Bitmap when we are done.
-	///
 	bitmap->UnlockPixels();
 	bitmap->SwapRedBlueChannels();
 }
@@ -920,8 +956,6 @@ void UltralightImpl::RenderOneFrame() {
 
 void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels, uint32_t width, uint32_t height, uint32_t stride)
 { 
-	texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
-
 	auto ConvertedPixels = static_cast<unsigned char*>(pixels);
 	blob->setData(ConvertedPixels,stride);
 
@@ -933,13 +967,20 @@ void UltralightImpl::CreateTexture(Unigine::WidgetSpritePtr sprite,void* pixels,
 
 void UltralightImpl::createHUDWidgetSprite()
 {
+	auto width = 500;//App::getWidth();
+	auto height = 500;//App::getHeight();
+
 	hud = WidgetSprite::create(gui);
 	hud->setPosition(0, 0);
-	hud->setWidth(900);
-	hud->setHeight(600);
+	hud->setWidth(width);
+	hud->setHeight(height);
 	hud->setLayerBlendFunc(0, Gui::BLEND_ONE, Gui::BLEND_ONE_MINUS_SRC_ALPHA);
 
+	texture->create2D(width, height, Texture::FORMAT_RGBA8, Texture::DEFAULT_FLAGS);
+
 	gui->addChild(hud, Gui::ALIGN_OVERLAP);
+
+	Ultralight_Gui_Id = gui->getNumChildren() - 1;
 }
 
 void UltralightImpl::shutdown()
@@ -949,6 +990,8 @@ void UltralightImpl::shutdown()
 	font_texture->deleteLater();
 
 	Render::removeCallback(Render::CALLBACK_END_SCREEN, draw_callback_handle);
+
+	renderer = nullptr;
 
 	App::setKeyPressFunc(nullptr);
 	App::setKeyReleaseFunc(nullptr);

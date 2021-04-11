@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Natvis Include="../utils/natvis/unigine_stl.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppEditorLogic.cpp" />
+    <ClCompile Include="AppSystemLogic.cpp" />
+    <ClCompile Include="AppWorldLogic.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="UltralightImpl.cpp" />
+    <ClCompile Include="LoggerDefault.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppEditorLogic.h" />
+    <ClInclude Include="AppSystemLogic.h" />
+    <ClInclude Include="AppWorldLogic.h" />
+    <ClInclude Include="UltralightImpl.h" />
+    <ClInclude Include="LoggerDefault.h" />
+  </ItemGroup>
+</Project>
